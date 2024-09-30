@@ -1,4 +1,4 @@
-# 🚀 Airflow + PySpark + Snowflake + PostgreSQL + Adzuna API Project
+## 🚀 Airflow + PySpark + Snowflake + PostgreSQL + Adzuna API Project
 
 Welcome to the **Data Engineering Pipeline Project**! This project involves extracting job data from the Adzuna API, processing it using PySpark, and storing it in Snowflake and PostgreSQL. The workflow is orchestrated using **Apache Airflow** to automate data ingestion and transformation tasks. 
 
@@ -84,11 +84,13 @@ The following table schema is used for storing job listings:
 | `job_description`| STRING   | Full description of the job   |
 
 
+## Download Required JAR Files 📥
+Before running the pipeline, you will need to download the **Snowflake JDBC driver** and **Snowflake Spark connector JAR files**:
 
+- **Snowflake JDBC Driver**: [Download from Maven](https://mvnrepository.com/artifact/net.snowflake/snowflake-jdbc)
+- **Snowflake Spark Connector**: [Download from Maven](https://mvnrepository.com/artifact/net.snowflake/spark-snowflake)
 
-
-
-
+Place these JAR files in a directory where PySpark can access them during execution.
 
 
 
