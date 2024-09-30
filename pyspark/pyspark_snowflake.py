@@ -7,7 +7,7 @@ spark = SparkSession.builder \
     .appName("PySpark Snowflake PostgreSQL Connection") \
     .config("spark.jars", "postgresql-42.7.3.jar") \
     .config("spark.jars.packages", "net.snowflake:snowflake-jdbc:3.13.14,net.snowflake:spark-snowflake_2.12:2.10.0-spark_3.0") \
-    .config("spark.executor.extraClassPath", "/home/cipher/pyspark_files/snowflake-jdbc-3.13.14.jar:/home/cipher/pyspark_files/spark-snowflake_2.12-2.10.0-spark_3.0.jar")\
+    .config("spark.executor.extraClassPath", "/path/to/snowflake-jdbc-3.13.14.jar:/path/to/spark-snowflake_2.12-2.10.0-spark_3.0.jar")\
     .getOrCreate()
 
 
