@@ -37,11 +37,7 @@ This project utilizes a modern data engineering tech stack to create an efficien
 - **PostgreSQL**: Relational database for storing job data
 - **Python**: Core language for script development
 
-## ⚙️ Installation
-
-To get started with this project, follow the steps below:
-
-### Prerequisites
+## Prerequisites
 
 Ensure you have the following installed:
 - **Python 3.10** or higher
