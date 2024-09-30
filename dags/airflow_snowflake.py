@@ -25,11 +25,11 @@ dag = DAG(
 # Define the SparkSubmitOperator
 spark_submit_task = SparkSubmitOperator(
     task_id='spark_snowflake_submit_job',
-    application='/home/cipher/pyspark_files/pyspark_snowflake.py',
+    application='/path/to/pyspark_snowflake.py file',
     conn_id='spark_default',
     executor_cores=2,
     executor_memory='2g',
-    jars='/home/cipher/pyspark_files/postgresql-42.7.3.jar,/home/cipher/pyspark_files/snowflake-jdbc-3.13.14.jar,/home/cipher/pyspark_files/spark-snowflake_2.12-2.10.0-spark_3.0.jar',
+    jars='/path/to/pyspark_files/postgresql-42.7.3.jar,/path/to/snowflake-jdbc-3.13.14.jar,/path/to/spark-snowflake_2.12-2.10.0-spark_3.0.jar',
     total_executor_cores=2,
     name='SNOWFLAKE_PYSARK_PROJECT',
     verbose=True,
