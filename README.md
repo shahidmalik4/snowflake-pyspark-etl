@@ -45,6 +45,7 @@ Ensure you have the following installed:
 - **PySpark**
 - **PostgreSQL**
 - **Snowflake Account**
+- **Adzuna Account**
 
 ## 📈 Data Flow
 
