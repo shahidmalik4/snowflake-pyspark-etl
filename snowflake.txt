@@ -1,0 +1,39 @@
+-- Create a warehouse named PROJECT_1_WH if it doesn't already exist, with specified parameters
+CREATE WAREHOUSE IF NOT EXISTS PROJECT_1_WH
+  WAREHOUSE_SIZE = 'XSMALL'  -- Set the warehouse size to XSMALL
+  AUTO_SUSPEND = 300          -- Automatically suspend the warehouse after 300 seconds of inactivity
+  AUTO_RESUME = TRUE;         -- Automatically resume the warehouse when a query is executed
+
+-- Set the current warehouse to PROJECT_1_WH for the session
+USE WAREHOUSE PROJECT_1_WH;
+
+-- Create a database named ANALYSIS if it doesn't already exist
+CREATE DATABASE IF NOT EXISTS ANALYSIS;
+
+-- Set the current database to ANALYSIS for the session
+USE DATABASE ANALYSIS;
+
+-- Create a schema named JOBS_SCHEMA in the ANALYSIS database if it doesn't already exist
+CREATE SCHEMA IF NOT EXISTS ANALYSIS.JOBS_SCHEMA;
+
+-- Create a user named shahid with specified properties if the user doesn't already exist
+CREATE USER IF NOT EXISTS shahid
+  PASSWORD = 'adminproxy1S$'         -- Set the user's password
+  DEFAULT_WAREHOUSE = 'PROJECT_1_WH' -- Set the default warehouse for the user
+  DEFAULT_ROLE = 'SYSADMIN'           -- Set the default role for the user
+  MUST_CHANGE_PASSWORD = FALSE;        -- User does not need to change their password upon first login
+
+-- Grant the SYSADMIN role to the user shahid
+GRANT ROLE SYSADMIN TO USER shahid;
+
+-- Grant USAGE privilege on the warehouse to the SYSADMIN role
+GRANT USAGE ON WAREHOUSE PROJECT_1_WH TO ROLE SYSADMIN;
+
+-- Grant USAGE privilege on the database to the SYSADMIN role
+GRANT USAGE ON DATABASE ANALYSIS TO ROLE SYSADMIN;
+
+-- Grant USAGE privilege on the schema to the SYSADMIN role
+GRANT USAGE ON SCHEMA ANALYSIS.JOBS_SCHEMA TO ROLE SYSADMIN;
+
+-- Grant ALL PRIVILEGES on the schema to the SYSADMIN role, allowing complete control
+GRANT ALL PRIVILEGES ON SCHEMA ANALYSIS.JOBS_SCHEMA TO ROLE SYSADMIN;
