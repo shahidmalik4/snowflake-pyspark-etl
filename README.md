@@ -1,15 +1,15 @@
 ## 🚀 Airflow + PySpark + Snowflake + PostgreSQL + Adzuna API Project
 
-Welcome to the **Data Engineering Pipeline Project**! This project involves extracting job data from the Adzuna API, processing it using PySpark, and storing it in Snowflake and PostgreSQL. The workflow is orchestrated using **Apache Airflow** to automate data ingestion and transformation tasks. 
+Welcome to the **Data Engineering Pipeline Project**! This project involves extracting job data from the Adzuna API, storing raw data in PostgreSQ, processing it using PySpark, and then loading it in Snowflake. The workflow is orchestrated using **Apache Airflow** to automate data ingestion and transformation tasks. 
 
 ## 📄 Overview
 
-This project focuses on building a data pipeline to fetch job listings for Data Engineers in the USA using the **Adzuna API**, transform the data using **PySpark**, and load the data into **Snowflake** and **PostgreSQL** databases. The process is managed with **Apache Airflow** to ensure efficient scheduling and monitoring of tasks.
+This project focuses on building a data pipeline to fetch job listings for Data Engineers in the USA using the **Adzuna API**, transform the data using **PySpark**, and load the data into **Snowflake**. The process is managed with **Apache Airflow** to ensure efficient scheduling and monitoring of tasks.
 
 The key objectives of this project:
 - Extract real-time job data from Adzuna API.
 - Process and clean job data using PySpark.
-- Load the transformed data into Snowflake and PostgreSQL.
+- Load the transformed data into Snowflake.
 - Schedule, monitor, and orchestrate tasks with Airflow.
 
 
@@ -36,8 +36,6 @@ This project utilizes a modern data engineering tech stack to create an efficien
 - **Snowflake**: Cloud-based data warehousing
 - **PostgreSQL**: Relational database for storing job data
 - **Python**: Core language for script development
-- **Docker**: Containerization for consistent development and deployment environments
-- **WSL2**: Windows Subsystem for Linux for Linux-based development on Windows
 
 ## ⚙️ Installation
 
@@ -47,7 +45,6 @@ To get started with this project, follow the steps below:
 
 Ensure you have the following installed:
 - **Python 3.10** or higher
-- **Docker** and **Docker Compose**
 - **Apache Airflow**
 - **PySpark**
 - **PostgreSQL**
